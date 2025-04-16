@@ -1,28 +1,49 @@
+.linha {
+  height: 100vh; /* Cada linha ocupa 100% da altura da tela. Mude se quiser menor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
 
+.linha-1 {
+  background-image: url('imagens_figma/Hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-image: url('imagens_figma/Hero.png');
-    background-size: cover;     
-    background-position: center;  
-    background-repeat: no-repeat;
-  }
-  
-  /* Título no centro */
-  .centro {
-    height: 100vh;
-    display: flex;
-    justify-content: center; /* centro horizontal */
-    align-items: center;     /* centro vertical */
-  }
+/* Texto centralizado sobre a imagem */
+.overlay-text {
+  z-index: 2;
+}
 
+.texto-central {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 2;
+}
 
-  h1 {
-    font-size: 8rem;
-    color: white;
-    font-family:"Josefin Slab", serif;
-    font-weight: 400;
-  }
-  
+/* Transparência e ajuste de navbar */
+.navbar {
+  background-color: transparent !important;
+  z-index: 3;
+}
+
+/* Link da navbar branco */
+.navbar .nav-link {
+  color: white !important;
+}
+
+/* Link hover */
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}

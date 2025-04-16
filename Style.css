@@ -1,0 +1,28 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('imagens_figma/Hero.png');
+    background-size: cover;     
+    background-position: center;  
+    background-repeat: no-repeat;
+  }
+  
+  /* Título no centro */
+  .centro {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centro horizontal */
+    align-items: center;     /* centro vertical */
+  }
+
+
+  h1 {
+    font-size: 8rem;
+    color: white;
+    font-family:"Josefin Slab", serif;
+    font-weight: 400;
+  }
+  

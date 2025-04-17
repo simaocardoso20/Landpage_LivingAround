@@ -1,49 +1,200 @@
-.linha {
-  height: 100vh; /* Cada linha ocupa 100% da altura da tela. Mude se quiser menor */
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 2rem;
-  color: white;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
 }
 
-.linha-1 {
-  background-image: url('imagens_figma/Hero.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* Coluna 1 */
+.coluna1 {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.imagem-container {
   position: relative;
+  width: 100%;
+  height: auto;
 }
 
-/* Texto centralizado sobre a imagem */
-.overlay-text {
-  z-index: 2;
-}
-
-.texto-central {
-  color: white;
-  font-size: 4rem;
-  font-weight: bold;
-  z-index: 2;
-}
-
-/* Transparência e ajuste de navbar */
-.navbar {
+.navbar-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
   background-color: transparent !important;
-  z-index: 3;
-}
+  z-index: 10;
+  padding: 10px 20px;
+  font-family: "Jura", sans-serif;
+  font-size: 19px;
+  }
 
-/* Link da navbar branco */
+.navbar-nav .nav-item {
+    margin-right: 35px; /* aumenta o espaço entre os itens */
+  }
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+
 .navbar .nav-link {
-  color: white !important;
+  color: rgb(0, 0, 0); /* ou o que combinar com sua imagem */
+  font-weight: bold;
 }
 
-/* Link hover */
 .navbar .nav-link:hover {
-  text-decoration: underline;
+  color: #ccc; /* efeito hover claro */
+}
+
+
+.imagem-coluna1 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto-coluna1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+}
+
+/* Wrapper para coluna 2 e 3 lado a lado */
+.coluna-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Coluna 2 */
+.coluna2 {
+  flex: 1;
+  display: flex;
+  margin: 60px 0;
+  padding: 0;
+  text-align: center;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.texto-coluna2 {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-family: "Jura", sans-serif;
+  color: #000;
+  line-height: 0.6; /* entrelinhas mais juntas */
+}
+
+/* Destaque de uma palavra */
+.palavra-destaque {
+  color: #686931;
+}
+
+/* Adicionar linha preta */
+.divisoria {
+  width: 1px;
+  background-color: black;
+  height: auto;
+  margin: 60px 0;
+}
+
+/* Coluna 3 */
+.coluna3 {
+  flex: 1;
+  display: flex;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-coluna3 {
+  width: 100%;
+  padding: 100px 20px;
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: "Jura", sans-serif;
+  color: #000;
+  line-height: 0.6; /* entrelinhas mais juntas */
+}
+
+/* Cantoneiras */
+.cantoneiras {
+  position: relative;
+  padding: 20px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listas-duplas {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  font-size: 15px;
+  line-height: 1;
+  text-align: left;
+  list-style: none;
+  width: 90%;
+}
+
+.listas-duplas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listas-duplas li {
+  margin-bottom: 5px; /* opcional: dá um espacinho entre as palavras */
+}
+
+.cantoneiras::before,
+.cantoneiras::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 6px solid black;
+}
+
+.cantoneiras::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.cantoneiras::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Responsividade: mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+
+  .coluna-wrapper {
+    flex-direction: column;
+  }
 }

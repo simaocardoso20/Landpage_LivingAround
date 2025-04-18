@@ -22,48 +22,44 @@
 
 <body>
   
-  <!-- Coluna 1 -->
-  <div class="container">
-    <div class="coluna1">
-      <div class="imagem-container">
-    
+  <!-- Cabeçalho Hero -->
+  <div class="cabecalho-hero" id="hero">  
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                 </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">Acomodação</a>
-              </li>
-              </li>
+                  </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Locais</a>
-              </li>
+                  </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
-              </li>
+                  </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contactos</a>
-              </li>
+                  </li>
             </ul>
           </div>
         </div>
       </nav>
 
       <!-- Imagem Estrada (Hero) e texto Living Around -->
-        <img src="imagens_figma/Hero.png" alt="hero" class="imagem-coluna1">
-        <div class="texto-coluna1">LIVING AROUND</div>
-      </div>
-    </div>
+        <img src="imagens_figma/Hero.png" alt="hero" class="imagem-cabecalho">
+        <div class="texto-cabecalho">LIVING AROUND</div>
+  </div>
+    
 
 
 
-<!-- Colunas 2 e 3 lado a lado -->
-<div class="coluna-wrapper coluna2-3">
+<!-- Section Hero -->
+<div class="section-hero">
   <!-- Coluna 2 -->
   <div class="coluna2">
     <div class="texto-coluna2">
@@ -104,14 +100,14 @@
   </div>
 </div>
    
-
-<!-- Coluna 4 -->
-<div class="coluna-wrapper-4-5">
+<!-- Section Acomodação -->
+<div class="section-acomodacao">
+  <!-- Coluna 4 imagem -->
   <div class="coluna4">
     <img src="imagens_figma/pexels-gya-den-768256-2303781 2.png" alt="carrinha pão de forma" class="imagem-coluna4";>
-  
+  </div>
 
-  <!-- Coluna 5 -->
+  <!-- Coluna 5 texto -->
  <div class="coluna5">
   <div class="texto-coluna5">
     <p>Descubra o seu novo</p>
@@ -119,36 +115,81 @@
         <!-- Botão descobrir -->
   <div class="rectangle-2">
     Descobrir
+      </div>
+    </div>
+    <!-- Icon seta -->
+ <div class="icon-seta1">
+  <img src="imagens_figma/Icons/Arrow_Up.svg" alt="Seta">
   </div>
-  </div>
-</div>
   </div>
 </div>
 
-<div class="coluna-wrapper-6-7">
-  <!-- Coluna 6 -->
-  <div class="coluna6">
-    <div class="texto-coluna6">
-      <p>Temos destinos</p>
-      <p>especiais para você</p><br>
-      <div class="rectangle-3">
+ <!-- Section Locais -->
+<div class="section-locais">
+  <!-- Section Locais Texto -->
+    <div class="section-locais-texto">
+      <div class="texto-coluna6">
+        <p>Temos destinos</p>
+          <p>especiais para você</p><br>
+            <div class="rectangle-3">
         Explorar
       </div>
     </div>
+    <!-- Icon seta -->
+ <div class="icon-seta2">
+  <img src="imagens_figma/Icons/Arrow_Up2.svg" alt="Seta">
   </div>
+  </div>
+  
 
-  <!-- Coluna 7 -->
+  <!-- Coluna 7 imagem -->
   <div class="coluna7">
-    <img src="imagens_figma/pexels-thatguycraig000-1546898 2.png" alt="Imagem carrinha" class="imagem-coluna7">
+    <img src="imagens_figma/pexels-thatguycraig000-1546898 2.png" alt="estrada outono" class="imagem-coluna7">
   </div>
+</div>  
+
+ <!-- Coluna 8 imagem -->
+  
+    <div class="section-blog">
+      <img src="imagens_figma/pexels-thepaintedsquare-583848 1.png" alt="blog" class="imagem-section-blog">
+      <!-- Botão blog -->
+       <div class="rectangle-4">BLOG</div>
+    </div>
+  
+
+  <!-- Footer -->
+  <footer class="rectangle-16">
+    <div class="footer-texto-titulo">
+    <p>LIVING AROUND</p></div>
+    <div class="footer-icons">
+      <div class="footer-links">
+      <a href="#"><img src="imagens_figma/Icons/Vector_Facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="imagens_figma/Icons/Vector_Instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="imagens_figma/Icons/Vector_X.svg" alt="X"></a>
+    </div>
+  </div>
+  <div class="footer-texto-final">
+    <p>Power by Cesae Digital</p>
 </div>
-
-
-
-
+</footer>
+  
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+      document.querySelector(".icon-seta1").addEventListener("click", function () {
+        const target = document.getElementById("hero");
+        if (target) {
+          target.scrollIntoView({ behavior: "auto" });
+        }
+      });
+
+      document.querySelector('.icon-seta2').addEventListener('click', function () {
+  document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+});
+    </script>
+  
   </body>
 </html>

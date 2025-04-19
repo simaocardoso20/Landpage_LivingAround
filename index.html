@@ -154,8 +154,12 @@
       <img src="imagens_figma/pexels-thepaintedsquare-583848 1.png" alt="blog" class="imagem-section-blog">
       <!-- Botão blog -->
        <div class="rectangle-4">BLOG</div>
-    </div>
-  
+       <!-- Icon seta -->
+ <div class="icon-seta3">
+  <img src="imagens_figma/Icons/Arrow_Up2.svg" alt="Seta">
+  </div>
+  </div>
+    
 
   <!-- Footer -->
   <footer class="rectangle-16">
@@ -179,15 +183,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   
     <script>
-      document.querySelector(".icon-seta1").addEventListener("click", function () {
-        const target = document.getElementById("hero");
-        if (target) {
-          target.scrollIntoView({ behavior: "auto" });
-        }
-      });
+      document.querySelector('.icon-seta1').addEventListener('click', function () {
+  document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+});
 
       document.querySelector('.icon-seta2').addEventListener('click', function () {
   document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+});
+
+  document.querySelector('.icon-seta3').addEventListener('click', function () {
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
 });
     </script>
   

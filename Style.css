@@ -488,6 +488,22 @@
   justify-content: center;
 }
 
+/* Icon seta3 */
+.icon-seta3 {
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  bottom: 30px; /* distancia do fundo */
+  right: 20px; /* distancia da direita */
+  border: 3px solid rgba(255, 255, 255, 1);
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /* Footer */
 
 .rectangle-16 {
@@ -536,4 +552,3 @@
   color: rgba(255, 255, 255, 1);
   margin-top: 15px; 
 }
-

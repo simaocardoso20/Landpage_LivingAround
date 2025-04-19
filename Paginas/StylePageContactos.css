@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra o conteúdo horizontalmente */
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+  
+  /* Página completa */
+  .page-contactos {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto; /* centra horizontalmente */
+  overflow: hidden;
+  }
+
+  /* Imagem de fundo */
+  .imagem-page-contactos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 1024px;
+    object-fit: fill; /* garante que a imagem ocupa exatamente as dimensões */
+    z-index: -1;
+    display: block;
+    border-radius: 0 !important;
+  }
+  
+  /* Navbar sobre a imagem */
+  .navbar-custom {
+    position: relative; /* ou absolute se quiseres fixa no topo */
+    z-index: 2;
+    background-color: transparent !important;
+    padding: 15px 30px;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0;
+    right: 55px;
+    top: 50px;
+    font-family: 'josephin slab';
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 40px; /* aumenta o espaço entre os itens */
+  }
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+
+.navbar .nav-link {
+  color: rgb(255, 255, 255);
+}
+  
+  /* Texto ao centro */
+  .texto-page-contactos {
+    position: absolute;
+    top: 50%;
+    right: 60px; /* distância do lado direito */
+    transform: translateY(-50%); /* apenas centra verticalmente */
+    z-index: 1;
+    color: white;
+    text-align: right; /* alinha o texto à direita */
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 118%;
+    font-family: 'jura';
+    letter-spacing: 0;
+    color: rgb (255, 255, 255. 1);
+  }
+
+
+    /* Icon barras */
+.icon-barras {
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0px; /* distancia do fundo */
+  left: 120px; /* distancia da direita */
+  width: 59px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
